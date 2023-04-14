@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="index.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Bestilling of Kinobiletter</title>
+</head>
+<body>
+<div class="container">
+    <div class="row align-items-start">
+        <div class=" col col-md-6">
+            <h2 class="p-2 text-info font-weight-bold">BESTILLING OF KINOBILLETTER</h2>
+            <form class="form">
+                <label for="kino">Velg film:</label>
+                <select id="kino" class="form-control"  onchange="tomError()">
+                    <option value="none" id="none" selected disabled hidden>Velg film her</option>
+                    <option value="Star Wars" id="1">Star Wars</option>
+                    <option value="Back to the Fulture" id="2">Back to the Future</option>
+                    <option value="Shutter Island" id="3">Shutter Island</option>
+                    <option value="The Shining" id="4">The Shining</option>
+                    <option value="E.T." id="5">E.T.</option>
+                    <option value="Shawshank Redemption" id="6">Shawshank Redemption</option>
+                    <option value="Casablanca" id="7">Casablanca</option>
+                    <option value="Avatar" id="8">Avatar</option>
+                    <option value="Hokus Pokus" id="9">Hokus Pokus</option>
+                </select>
+                <span id="kinoError" class="text-danger"></span><br/>
+
+                <label for="antall">Antall</label>
+                <input type="number" class="form-control" onchange="tomError()" id="antall" min="1" max="9" />
+                <span id="antallError" class="text-danger"></span><br/>
+
+                <label for="fornavn">Fornavn</label>
+                <input type="text" class="form-control" onchange="tomError()" id="fornavn"/>
+                <span id="fname" class="text-danger"></span><br/>
+
+                <label for="etternavn">Etternavn</label>
+                <input type="text" class="form-control"  onchange="tomError()" id="etternavn"/>
+                <span id="etternavnError" class="text-danger"></span><br/>
+
+                <label for="telefonnr">Telefonnr</label>
+                <input type="tel" class="form-control"  onchange="tomError()" id="telefonnr"/>
+                <span id="telefonnrError" class="text-danger"></span><br/>
+
+                <label for="epost" >Epost</label>
+                <input type="email" class="form-control"  onchange="tomError()" id="epost"></td>
+                <span id="epostError" class="text-danger"></span><br/>
+            </form>
+            <button class="btn btn-primary" onclick="lagreBillett();visFilmer()">Kjøp Billett</button>
+            <button class="btn btn-danger float-right" onclick="slettAlle()">Slett alle billettene</button>
+        </div>
+        <div class="col-md-6">
+            <h2 class="p-2 text-info font-weight-bold">ALLE BILLETTER</h2>
+            <div id="film"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
