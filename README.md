@@ -5,6 +5,7 @@ OsloMet brukernavn: s375164
 GitHub brukernavn: s375164
 
 Github repo URL: https://github.com/data1700-v23/oblig-3-s375164
+Youtube Video link: https://youtu.be/M9B9fQszQyI 
 
 Fullt navn: Jaspreet Kaur
 
