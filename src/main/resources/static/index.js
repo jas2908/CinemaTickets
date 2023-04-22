@@ -57,7 +57,9 @@ function hentAlle() {
 function visFilmer(billetter) {
     let ut = "<table class='table table-striped text-info'><tr><th>Kino</th><th>Antall</th><th>Fornavn</th>" +
         "<th>Etternavn</th><th>Telefonnr</th><th>Epost</th></tr>"
-    for (let enBillett of billetter) {
+
+    for (let enBillett of Object.values(billetter || {})) {
+
         ut += "<tr><td>" + enBillett.kino + "</td><td>" + enBillett.antall + "</td><td>" + enBillett.fornavn + "</td><td>"
             + enBillett.etternavn + "</td><td>" + enBillett.telefonnr + "</td><td>" + enBillett.epost + "</td></tr>";
     }
